@@ -80,6 +80,16 @@ adb shell am broadcast -a ADB_EDITOR_CODE --ei code 2
 4. Sending unicode characters
 To send 😸 Cat
 adb shell am broadcast -a ADB_INPUT_CHARS --eia chars '128568,32,67,97,116'
+  
+```
+逗号分隔的十进制 Unicode 码点。
+* 128568 → 😸（U+1F638，笑脸猫）
+* 32 → 空格（U+0020）
+* 67 → C（U+0043）
+* 97 → a（U+0061）
+* 116 → t（U+0074）
+```
+  
 
 5. Send meta keys
 To send Ctrl + A as below: (4096 is META_CONTROL_ON, 8192 is META_CONTROL_LEFT_ON, 29 is KEYCODE_A)
